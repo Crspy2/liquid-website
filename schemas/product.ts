@@ -36,6 +36,11 @@ export default {
         title: 'Details',
         type: 'array', 
         of: [{type: 'block'}]
+      },
+      {
+        name: 'detected',
+        title: 'Detected',
+        type: 'boolean'
       }
     ]
   }
