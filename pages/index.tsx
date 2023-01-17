@@ -1,10 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { Nav } from '../components'
 
 const Home: NextPage = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
+      <Nav />
       <Head>
         <title>Liquid</title>
         <link rel="icon" href="/favicon.ico" />
