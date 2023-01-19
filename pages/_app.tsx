@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { NextUIProvider, createTheme, getDocumentTheme } from '@nextui-org/react'
 import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 
 const darkTheme = createTheme({ type: "dark"})
 
@@ -33,6 +34,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   return (
     <NextUIProvider theme={darkTheme}>
+      <Head>
+        <title>Liquid</title>
+      </Head>
       <Component {...pageProps} />
     </NextUIProvider>
   )

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import { urlFor } from '../lib/sanity.client'
 
@@ -21,7 +22,7 @@ const Header = ({ bannerInfo }: Props) => {
                 </div>
             </div>
             <div className='pr-20'>
-                <img src={urlFor(banner.image)} alt="menu" className='w-50 h-50'/>
+                <Image src={`${urlFor(banner.image)}`} alt="menu" width={2000} height={2000}/>
             </div>
         </div>
     )
