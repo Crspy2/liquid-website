@@ -5,7 +5,11 @@ import React, { useEffect, useState } from 'react';
 
 const darkTheme = createTheme({ type: "dark"})
 
-function MyApp({ Component, pageProps }: AppProps) {
+
+type Props = {}
+
+
+const MyApp = ({ Component, pageProps }: AppProps) => {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
