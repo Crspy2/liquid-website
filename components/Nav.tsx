@@ -22,7 +22,7 @@ export default function App() {
             Login
           </Navbar.Link>
           <Navbar.Item>
-            <Button auto flat as={Link} href="#">
+            <Button shadow color="primary" auto>
               Sign Up
             </Button>
           </Navbar.Item>

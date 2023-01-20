@@ -14,21 +14,19 @@ const Haed = ({ bannerInfo }: Props) => {
     const banner: Banner = bannerInfo[0]
     return (
         <div>
-            <div className="flex w-full h-full justify-center items-center mt-20">
-                <h1 className={`text-9xl sm:text-8xl py-1 ${inter.className} font-bold prevent-select`}>
+            <div className="grid justify-center items-center mt-20 text-center">
+                <h1 className={`text-6xl xl:text-8xl lg:text-8xl md:text-7xl ${inter.className} font-bold prevent-select`}>
                     <span className='text-white'>{banner.largeText1} </span>
                     <span className='liquid-title-gradient'>{banner.largeText2}</span>
                 </h1>
-            </div>
-            <div className="flex w-full h-full justify-center items-center">
-                <h1 className={`text-5xl sm:text-4xl py-1 ${inter.className} font-bold prevent-select`}>
+                <h1 className={`text-2xl xl:text-4xl lg:text-4xl md:text-3xl py-1 ${inter.className} font-bold prevent-select`}>
                     <span className='text-white'>Download, login, dominate<strong>!</strong></span>
                 </h1>
             </div>
-            <div className="flex w-full h-full justify-center items-center">
-                <div className="flex flex-col items-start justify-between md:p-20 py-12 px-4">
-                    <div className="flex flex-1 justify-start items-start flex-col mf:mr-10">
-                        <p className={`text-left text-lg mt-5 text-white font-light ${inter.className}`}>
+            <div className="grid md:grid-cols-2 grid-rows-2 w-full h-full justify-center items-center">
+                <div className="items-start justify-between md:p-20 py-12 px-4">
+                    <div className="justify-start items-start mf:mr-10">
+                        <p className={`text-left 2xl:text-2xl xl:text-xl lg:text-lg md:text-base mt-5 text-white font-light ${inter.className}`}>
                             {banner.desc}
                         </p>
                     </div>
