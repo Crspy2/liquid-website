@@ -17,7 +17,7 @@ const Header = ({ bannerInfo }: Props) => {
             <div className="grid justify-center items-center mt-20 text-center">
                 <h1 className={`text-6xl xl:text-8xl lg:text-8xl md:text-7xl ${inter.className} font-bold prevent-select`}>
                     <span className='text-white'>{banner.largeText1} </span>
-                    <span className='liquid-title-gradient'>{banner.largeText2}</span>
+                    <span className='liquid-title-gradient'>{banner.largeText2}.</span>
                 </h1>
                 <h1 className={`text-2xl xl:text-4xl lg:text-4xl md:text-3xl py-1 ${inter.className} font-bold prevent-select`}>
                     <span className='text-white'>Download, login, dominate<strong>!</strong></span>

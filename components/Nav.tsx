@@ -1,5 +1,5 @@
 import { Navbar, Button, Link, Image } from "@nextui-org/react";
-
+import { FaDiscord } from 'react-icons/fa'
 export default function App() {
   return (
       <Navbar maxWidth="fluid" variant="sticky" containerCss={{$$navbarBackgroundColor: "transparent", $$navbarBlurBackgroundColor: "transparent"}}>
@@ -12,9 +12,11 @@ export default function App() {
           <Navbar.Link href="#">Features</Navbar.Link>
           <Navbar.Link href="#">Status</Navbar.Link>
           <Navbar.Link href="#">Pricing</Navbar.Link>
-          <Navbar.Link href="https://discord.gg/ourserver" target="_blank">Discord</Navbar.Link>
         </Navbar.Content>
         <Navbar.Content>
+          <Navbar.Link color="inherit" href="https://discord.gg/ourserver">
+            <FaDiscord className="w-[23px] h-[23px] text-gray-500" />
+          </Navbar.Link>
           <Navbar.Link color="inherit" href="#">
             Login
           </Navbar.Link>
