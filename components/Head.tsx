@@ -10,7 +10,7 @@ type Props = {
     bannerInfo: Banner[]
 }
 
-const Header = ({ bannerInfo }: Props) => {
+const Haed = ({ bannerInfo }: Props) => {
     const banner: Banner = bannerInfo[0]
     return (
         <div>
@@ -41,4 +41,4 @@ const Header = ({ bannerInfo }: Props) => {
     )
 }
 
-export default Header
+export default Haed

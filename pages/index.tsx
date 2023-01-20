@@ -1,8 +1,8 @@
 import { Inter } from '@next/font/google'
-import { Header, Nav } from '../components'
+import { Head, Nav } from '../components'
 import { client } from '../lib/sanity.client'
 
-// const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] })
 
 type Props = {
   bannerData: Banner[]
@@ -11,10 +11,10 @@ type Props = {
 
 const Home = ({bannerData, products}: Props) => {
   return (
-    <main className="min-h-screen">
+    <main>
       <div className="gradient-bg-welcome">
         <Nav />
-        <Header bannerInfo={bannerData}/>
+        <Head bannerInfo={bannerData}/>
       </div>
 
     </main>

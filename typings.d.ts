@@ -22,7 +22,8 @@ interface Banner extends Base {
     desc: string;
     smallText: string;
     midText: string;
-    largeText: string;
+    largeText1: string;
+    largeText2: string;
 }
 
 interface Slug {

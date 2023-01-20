@@ -1,18 +1,14 @@
-import { Navbar, Button, Link, Text, useTheme, Switch, changeTheme } from "@nextui-org/react";
+import { Navbar, Button, Link, Text } from "@nextui-org/react";
+import Image from "next/image";
 
 export default function App() {
-  const { type, isDark } = useTheme();
-
-  const handleChange = () => {
-    const nextTheme = isDark ? 'light' : 'dark';
-    window.localStorage.setItem('data-theme', nextTheme); // you can use any storage
-    changeTheme(nextTheme);
-  }
   return (
       <Navbar maxWidth="fluid" variant="sticky" css={{background: "$"}}>
         <Navbar.Brand>
           <Text b color="inherit" hideIn="xs">
-            Liquid
+            <Link href="/" className="outline-none">
+              <Image src="/logo.png" alt="liquid-web-logo" width={97.5} height={97.5} className="-ml-5"/>
+            </Link>
           </Text>
         </Navbar.Brand>
         <Navbar.Content enableCursorHighlight hideIn="xs">
@@ -22,10 +18,6 @@ export default function App() {
           <Navbar.Link href="#">Company</Navbar.Link>
         </Navbar.Content>
         <Navbar.Content>
-          <Switch
-            checked={isDark}
-            onChange={handleChange}
-          />
           <Navbar.Link color="inherit" href="#">
             Login
           </Navbar.Link>
