@@ -13,16 +13,16 @@ export default function App() {
         </Navbar.Brand>
         <Navbar.Content enableCursorHighlight hideIn="xs">
           <Navbar.Link href="#">Features</Navbar.Link>
-          <Navbar.Link href="#">Customers</Navbar.Link>
+          <Navbar.Link href="#">Status</Navbar.Link>
           <Navbar.Link href="#">Pricing</Navbar.Link>
-          <Navbar.Link href="#">Company</Navbar.Link>
+          <Navbar.Link href="https://discord.gg/ourserver" target="_blank">Discord</Navbar.Link>
         </Navbar.Content>
         <Navbar.Content>
           <Navbar.Link color="inherit" href="#">
             Login
           </Navbar.Link>
           <Navbar.Item>
-            <Button shadow color="primary" auto>
+            <Button shadow color="primary" className="outline-gradient" auto>
               Sign Up
             </Button>
           </Navbar.Item>

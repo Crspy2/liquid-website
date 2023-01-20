@@ -1,5 +1,5 @@
 import { Inter } from '@next/font/google'
-import { Head, Nav } from '../components'
+import { Header, Nav } from '../components'
 import { client } from '../lib/sanity.client'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -14,7 +14,7 @@ const Home = ({bannerData, products}: Props) => {
     <main>
       <div className="gradient-bg-welcome">
         <Nav />
-        <Head bannerInfo={bannerData}/>
+        <Header bannerInfo={bannerData}/>
       </div>
 
     </main>
