@@ -1,6 +1,8 @@
-import type { NextPage } from 'next'
+import { Inter } from '@next/font/google'
 import { Header, Nav } from '../components'
 import { client } from '../lib/sanity.client'
+
+// const inter = Inter({ subsets: ['latin'] })
 
 type Props = {
   bannerData: Banner[]
