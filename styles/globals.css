@@ -6,16 +6,21 @@
   outline: none !important;
 }
 
-.gradient-bg-welcome {
+.gradient-bg {
   background-color:#0f0e13;
   background-image: radial-gradient(at 0% 0%, #030303 0, transparent 50%), 
                     radial-gradient(at 76.9% 68.5%, #0199fe 0, transparent 30%), 
                     radial-gradient(at 10% 40%, #000F76 0, transparent 50%);
 }
 
+.gradient-bg-mobile:before {
+  transform: rotate(80deg);
+}
+
 .liquid-title-gradient {
   background-color: #209cff;
-  background-image: radial-gradient(at 4% 36%, #209cff 0, transparent 53%), radial-gradient(at 100% 60%, #68e0cf 0, transparent 50%);
+  background-image: radial-gradient(at 4% 36%, #209cff 0, transparent 53%), 
+                    radial-gradient(at 100% 60%, #68e0cf 0, transparent 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

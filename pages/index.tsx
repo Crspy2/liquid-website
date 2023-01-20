@@ -12,7 +12,7 @@ type Props = {
 const Home = ({bannerData, products}: Props) => {
   return (
     <main>
-      <div className="gradient-bg-welcome">
+      <div className="gradient-bg">
         <Nav />
         <Header bannerInfo={bannerData}/>
       </div>

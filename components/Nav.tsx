@@ -1,17 +1,14 @@
-import { Navbar, Button, Link, Text } from "@nextui-org/react";
-import Image from "next/image";
+import { Navbar, Button, Link, Image } from "@nextui-org/react";
 
 export default function App() {
   return (
-      <Navbar maxWidth="fluid" variant="sticky" css={{background: "$"}}>
+      <Navbar maxWidth="fluid" variant="sticky" containerCss={{$$navbarBackgroundColor: "transparent", $$navbarBlurBackgroundColor: "transparent"}}>
         <Navbar.Brand>
-          <Text b color="inherit" hideIn="xs">
-            <Link href="/" className="outline-none">
+            <Link href="/">
               <Image src="/logo.png" alt="liquid-web-logo" width={97.5} height={97.5} className="-ml-5"/>
             </Link>
-          </Text>
         </Navbar.Brand>
-        <Navbar.Content enableCursorHighlight hideIn="xs">
+        <Navbar.Content hideIn="xs">
           <Navbar.Link href="#">Features</Navbar.Link>
           <Navbar.Link href="#">Status</Navbar.Link>
           <Navbar.Link href="#">Pricing</Navbar.Link>
