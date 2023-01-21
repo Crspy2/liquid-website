@@ -26,7 +26,7 @@ const Header = ({ bannerInfo }: Props) => {
             <div className="grid md:grid-cols-2 w-full h-full justify-center items-center">
                 <div className="items-start justify-between md:p-20 py-12 px-4">
                     <div className="justify-start items-start mf:mr-10">
-                        <p className={`text-left 2xl:text-2xl xl:text-xl lg:text-lg md:text-base mt-5 text-white font-light ${inter.className}`}>
+                        <p className={`text-left 2xl:text-xl xl:text-xl lg:text-lg md:text-base mt-5 text-white font-light ${inter.className}`}>
                             {banner.desc}
                         </p>
                     </div>

@@ -87,3 +87,11 @@
                       radial-gradient(at 10% 40%, #000F76 0, transparent 50%);
   }
 }
+
+.products-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+  width: 100%;
+}

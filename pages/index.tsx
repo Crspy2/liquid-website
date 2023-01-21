@@ -18,8 +18,8 @@ const Home = ({bannerData, products}: Props) => {
           <Header bannerInfo={bannerData}/>
         </div>
 
-        <div id='products'>
-          {products?.map((product) => <ProductCard productInfo={product} />)}
+        <div id='products' className="products-container bg-[#0F0E13] ">
+          {products?.map((product) => <ProductCard key={product._id} productInfo={product} />)}
         </div>
       </main>
       <footer>

@@ -6,11 +6,7 @@ export default {
       {
         name: 'image',
         title: 'Image',
-        type: 'array',
-        of: [{ type: 'image' }],
-        options: {
-          hotspot: true,
-        }
+        type: 'image',
       },
       { 
         name: 'name',
@@ -34,8 +30,7 @@ export default {
       { 
         name: 'details',
         title: 'Details',
-        type: 'array', 
-        of: [{type: 'block'}]
+        type: 'string',
       },
       {
         name: 'detected',

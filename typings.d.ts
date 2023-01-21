@@ -11,7 +11,7 @@ interface Product extends Base {
     name: string;
     slug: Slug;
     price: number;
-    details: Block[];
+    details: string;
     detected: boolean;
 }
 
