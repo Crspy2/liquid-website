@@ -13,13 +13,18 @@ const Home = ({bannerData, products}: Props) => {
   return (
     <>
       <main>
-        <div className="gradient-bg">
+        <div className="gradient-bg h-full">
           <Nav />
           <Header bannerInfo={bannerData}/>
-        </div>
-
-        <div id='products' className="products-container bg-[#0F0E13] ">
-          {products?.map((product) => <ProductCard key={product._id} productInfo={product} />)}
+        </div> 
+        
+        <div id='products' className="products-container bg-[#0F0E13] py-20">
+          <h1 className={`text-2xl xl:text-4xl lg:text-4xl md:text-3xl py-1 ${inter.className} font-bold prevent-select text-center justify-center`}>
+              Our Products
+          </h1>
+          <div className='products-container'>
+            {products?.map((product) => <ProductCard key={product._id} productInfo={product} />)}
+          </div>
         </div>
       </main>
       <footer>
