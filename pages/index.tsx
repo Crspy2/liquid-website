@@ -1,23 +1,31 @@
 import { Inter } from '@next/font/google'
-import { Header, Nav } from '../components'
+import { Footer, Header, Nav, ProductCard } from '../components'
 import { client } from '../lib/sanity.client'
 
 const inter = Inter({ subsets: ['latin'] })
 
 type Props = {
   bannerData: Banner[]
-  products: Product
+  products: Product[]
 }
 
 const Home = ({bannerData, products}: Props) => {
   return (
-    <main>
-      <div className="gradient-bg">
-        <Nav />
-        <Header bannerInfo={bannerData}/>
-      </div>
+    <>
+      <main>
+        <div className="gradient-bg">
+          <Nav />
+          <Header bannerInfo={bannerData}/>
+        </div>
 
-    </main>
+        <div id='products'>
+          {products?.map((product) => <ProductCard productInfo={product} />)}
+        </div>
+      </main>
+      <footer>
+        <Footer/>
+      </footer>
+    </>
   )
 }
 
