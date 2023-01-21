@@ -65,7 +65,7 @@
   .gradient-bg {
     background-color:#0f0e13;
     background-image: radial-gradient(at 0% 0%, #030303 0, transparent 50%), 
-                      radial-gradient(at 74.9% 70.5%, #0199fe 0, transparent 26%), 
+                      radial-gradient(at 74.9% 68.5%, #0199fe 0, transparent 26%), 
                       radial-gradient(at 10% 40%, #000F76 0, transparent 50%);
   }
 }
@@ -74,7 +74,7 @@
   .gradient-bg {
     background-color:#0f0e13;
     background-image: radial-gradient(at 0% 0%, #030303 0, transparent 50%), 
-                      radial-gradient(at 76.9% 70.5%, #0199fe 0, transparent 28%), 
+                      radial-gradient(at 76.9% 68.5%, #0199fe 0, transparent 28%), 
                       radial-gradient(at 10% 40%, #000F76 0, transparent 50%);
   }
 }
@@ -83,7 +83,7 @@
   .gradient-bg {
     background-color:#0f0e13;
     background-image: radial-gradient(at 0% 0%, #030303 0, transparent 50%), 
-                      radial-gradient(at 76.9% 70.5%, #0199fe 0, transparent 30%), 
+                      radial-gradient(at 76.9% 68.5%, #0199fe 0, transparent 30%), 
                       radial-gradient(at 10% 40%, #000F76 0, transparent 50%);
   }
 }
