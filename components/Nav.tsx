@@ -1,33 +1,159 @@
-import { Navbar, Button, Link, Image } from "@nextui-org/react";
+import React, { Fragment } from 'react'
+import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { FiMenu } from 'react-icons/fi'
+import { CgClose } from 'react-icons/cg'
 import { FaDiscord } from 'react-icons/fa'
-import Login from "./User/Login";
-import Signup from "./User/Signup";
+import Link from 'next/link'
 
-export default function App() {
+const navigation = [
+  { name: 'Dashboard', href: '#', current: true },
+  { name: 'Team', href: '#', current: false },
+  { name: 'Projects', href: '#', current: false },
+  { name: 'Calendar', href: '#', current: false },
+]
+
+function classNames(...classes: any) {
+  return classes.filter(Boolean).join(' ')
+}
+
+type Props = {}
+
+const Nav = (props: Props) => {
   return (
-      <Navbar maxWidth="fluid" variant="sticky" containerCss={{$$navbarBackgroundColor: "transparent", $$navbarBlurBackgroundColor: "transparent"}}>
-        <Navbar.Brand>
-            <Link href="/">
-              <Image src="/logo.png" alt="liquid-web-logo" width={97.5} height={97.5} className="-ml-5"/>
-            </Link>
-        </Navbar.Brand>
-        <Navbar.Content hideIn="xs">
-        <Navbar.Link href="#products">Products</Navbar.Link>
-          <Navbar.Link href="#">Features</Navbar.Link>
-          <Navbar.Link href="#">Status</Navbar.Link>
-        </Navbar.Content>
-        <Navbar.Content>
-          <Navbar.Link color="inherit" href="https://discord.gg/ourserver">
-            <FaDiscord className="w-[23px] h-[23px] text-gray-500" />
-          </Navbar.Link>
-            <Login />
-            <Signup />
-          {/* <Navbar.Item>
-            <Button shadow color="primary" className="outline-gradient" auto>
-              Sign Up
-            </Button>
-          </Navbar.Item> */}
-        </Navbar.Content>
-      </Navbar>
+    <Disclosure as="nav" className="fixed w-full bg-transparent backdrop-filter backdrop-blur-lg">
+      {({ open }) => (
+        <>
+          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div className="relative flex items-center justify-between h-16">
+              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                {/* Mobile menu button*/}
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700">
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <CgClose className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <FiMenu className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
+              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                <Link href="/" className='cursor-default'>
+                  <div className="flex-shrink-0 flex items-center">
+                    <img
+                      className="block lg:hidden h-10 w-auto"
+                      src="/logo.png"
+                      alt="Liquid"
+                    />
+                    <img
+                      className="hidden lg:block h-10 w-full"
+                      src="/logo.png"
+                      alt="Liquid"
+                    />
+                  </div>
+                </Link>
+                <div className="hidden sm:block sm:ml-6">
+                  <div className="flex space-x-4">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          item.current ? 'text-white' : 'text-gray-300 hover:text-white',
+                          'px-3 py-2 rounded-md text-sm font-medium'
+                        )}
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <Link href="https://discord.gg/ourserver">
+                <FaDiscord className='text-gray-500 w-6 h-6'/>
+              </Link>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                {/* Profile dropdown */}
+                <Menu as="div" className="ml-3 relative">
+                  <div>
+                    <Menu.Button className="bg-gray-800 flex text-sm rounded-full">
+                      <span className="sr-only">Open user menu</span>
+                      <img
+                        className="h-8 w-8 rounded-full"
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt=""
+                      />
+                    </Menu.Button>
+                  </div>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={classNames(active ? 'bg-[#0f0e13]' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Your Profile
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={classNames(active ? 'bg-[#0f0e13]' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Settings
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={classNames(active ? 'bg-[#0f0e13]' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Sign out
+                          </a>
+                        )}
+                      </Menu.Item>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
+              </div>
+            </div>
+          </div>
+
+          <Disclosure.Panel className="sm:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              {navigation.map((item) => (
+                <Disclosure.Button
+                  key={item.name}
+                  as="a"
+                  href={item.href}
+                  className={classNames(
+                    item.current ? ' text-white' : 'text-gray-300 hover:text-white',
+                    'block px-3 py-2 rounded-md text-base font-medium'
+                  )}
+                  aria-current={item.current ? 'page' : undefined}
+                >
+                  {item.name}
+                </Disclosure.Button>
+              ))}
+            </div>
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
   )
 }
+
+export default Nav

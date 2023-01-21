@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/DocumentsCount.jsx", "components/PreviewDocumentsCount.tsx", "components/Header.tsx", "pages/index.tsx", "components/User/password.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/DocumentsCount.jsx", "components/PreviewDocumentsCount.tsx", "components/Header.tsx", "pages/index.tsx", "components/User/password.js", "pages/404.js"],
   "exclude": ["node_modules"]
 }
