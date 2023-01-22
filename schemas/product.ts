@@ -36,6 +36,11 @@ export default {
         name: 'detected',
         title: 'Detected',
         type: 'boolean'
+      },
+      {
+        name: 'sellixpid',
+        title: 'Sellix Product ID',
+        type: 'string'
       }
     ]
   }

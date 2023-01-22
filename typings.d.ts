@@ -13,6 +13,7 @@ interface Product extends Base {
     price: number;
     details: string;
     detected: boolean;
+    sellixpid: string;
 }
 
 interface Banner extends Base {
