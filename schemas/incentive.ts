@@ -1,6 +1,6 @@
 export default {
-    name: "incentives",
-    title: "Incentives",
+    name: "incentive",
+    title: "Incentive",
     type: 'document',
     fields: [
         {

@@ -26,7 +26,7 @@ const Home = ({bannerData, products, incentiveData }: Props) => {
         </section>
         
         <section id='products' className="products-container bg-[#0F0E13] py-20">
-          <h2 className="text-5xl text-center font-extrabold tracking-tight text-blue-500 py-10 cursor-default">
+          <h2 className="text-5xl text-center font-extrabold tracking-tight py-10 text-transparent bg-clip-text bg-gradient-to-r from-[#007CF0] to-[#00DFD8] cursor-default">
             Our Products
           </h2>
           <div className='products-container'>
@@ -50,7 +50,7 @@ export const getServerSideProps = async () => {
   const bannerQuery = '*[_type == "banner"]';
   const bannerData = await client.fetch(bannerQuery);
 
-  const incentiveQuery = '*[_type == "incentives"]';
+  const incentiveQuery = '*[_type == "incentive"]';
   const incentiveData = await client.fetch(incentiveQuery);
 
 

@@ -22,10 +22,10 @@ const Nav = (props: Props) => {
       <span className="self-center text-xl font-semibold whitespace-nowrap text-white">Liquid</span>
   </a>
   <div className="flex md:order-2">
-      <button type="button" className="text-white font-bold rounded-lg text-sm px-5 py-2.5 text-center md:mr-0 bg-blue-600 hover:bg-blue-700 mr-3">
+      <button type="button" className="text-white font-bold rounded-lg text-sm px-5 py-2.5 text-center md:mr-0 bg-[#0199fe] mr-3">
         Sign up
       </button>
-      <button type="button" className="text-white font-bold rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 bg-blue-600 hover:bg-blue-700 md:ml-3">
+      <button type="button" className="text-white font-bold rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 bg-[#0199fe] md:ml-3">
         Log in
       </button>
   </div>

@@ -2,7 +2,7 @@ import Iframe from "sanity-plugin-iframe-pane";
 import type { DefaultDocumentNodeResolver } from "sanity/desk";
 
 export const getDefaultDocumentNode: DefaultDocumentNodeResolver = (S, { schemaType }) => {
-    if (schemaType === "product" || schemaType === "banner") {
+    if (schemaType === "product" ||  "banner" || "incentive") {
         return S.document().views([
             S.view.form(),
 
