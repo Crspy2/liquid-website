@@ -1,61 +1,68 @@
-const incentives = [
-  {
-    name: 'Free shipping',
-    imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-shipping-simple.svg',
-    description: "It's not actually free we just price it into the products. Someone's paying for it, and it's not us.",
-  },
-  {
-    name: '10-year warranty',
-    imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-warranty-simple.svg',
-    description: "If it breaks in the first 10 years we'll replace it. After that you're on your own though.",
-  },
-  {
-    name: 'Exchanges',
-    imageSrc: 'https://tailwindui.com/img/ecommerce/icons/icon-exchange-simple.svg',
-    description:
-      "If you don't like it, trade it to one of your friends for something of theirs. Don't send it here though.",
-  },
-]
+import { AiFillEye, AiFillSave } from "react-icons/ai"
+import { BiTargetLock } from "react-icons/bi"
 
-export default function Example() {
+const Incentive = () => {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-[#0F0E13]">
       <div className="max-w-7xl mx-auto py-24 sm:px-2 sm:py-32 lg:px-4">
         <div className="max-w-2xl mx-auto px-4 lg:max-w-none">
           <div className="grid grid-cols-1 items-center gap-y-10 gap-x-16 lg:grid-cols-2">
             <div>
-              <h2 className="text-4xl font-extrabold tracking-tight text-gray-900">
-                We built our business on great customer service
+              <h2 className="text-5xl font-extrabold tracking-tight text-blue-500 py-10">
+                A business built for customer satisfaction
               </h2>
-              <p className="mt-4 text-gray-500">
+              <p className="mt-4 text-gray-400">
                 At the beginning at least, but then we realized we could make a lot more money if we kinda stopped
                 caring about that. Our new strategy is to write a bunch of things that look really good in the
                 headlines, then clarify in the small print but hope people don't actually read it.
               </p>
             </div>
-            <div className="aspect-w-3 aspect-h-2 bg-gray-100 rounded-lg overflow-hidden">
+            <div className="bg-[#0F0E13] rounded-lg overflow-hidden">
               <img
                 src="https://tailwindui.com/img/ecommerce-images/incentives-07-hero.jpg"
                 alt=""
-                className="object-center object-cover"
+                className=""
               />
             </div>
           </div>
-          <div className="mt-16 grid grid-cols-1 gap-y-10 gap-x-8 lg:grid-cols-3">
-            {incentives.map((incentive) => (
-              <div key={incentive.name} className="sm:flex lg:block">
-                <div className="sm:flex-shrink-0">
-                  <img className="w-16 h-16" src={incentive.imageSrc} alt="" />
-                </div>
-                <div className="mt-4 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0">
-                  <h3 className="text-sm font-medium text-gray-900">{incentive.name}</h3>
-                  <p className="mt-2 text-sm text-gray-500">{incentive.description}</p>
+          {/* Blocks */}
+          <div className="">
+            
+            {/*  Features */}
+            <div className="bg-gray-900 rounded-lg bg-clip-padding bg-opacity-30 mt-5 max-w-7xl mx-auto divide-y divide-gray-200 lg:py-8 lg:flex lg:justify-center lg:divide-y-0 lg:divide-x">
+              <div className="py-8 lg:py-0 lg:w-1/3 lg:flex-none">
+                <div className="max-w-xs mx-auto px-4 flex items-center lg:max-w-none lg:px-8">
+                <AiFillEye className='h-8 w-8 text-blue-500'/>
+                  <div className="ml-4 flex-auto flex flex-col-reverse">
+                    <h3 className="font-semibold text-gray-300">Our vast visual customization will let you see what you want!</h3>
+                    <p className="text-sm font-medium text-gray-500">Unique Visuals</p>
+                  </div>
                 </div>
               </div>
-            ))}
+              <div className="py-8 lg:py-0 lg:w-1/3 lg:flex-none">
+                <div className="max-w-xs mx-auto px-4 flex items-center lg:max-w-none lg:px-8">
+                  <BiTargetLock className='h-8 w-8 text-blue-500'/>
+                  <div className="ml-4 flex-auto flex flex-col-reverse">
+                    <h3 className="font-semibold text-gray-300">Tune your aim settings to play the way you want to!</h3>
+                    <p className="text-sm font-medium text-gray-500">Fast, Customizable Aimbot</p>
+                  </div>
+                </div>
+              </div>
+              <div className="py-8 lg:py-0 lg:w-1/3 lg:flex-none">
+                <div className="max-w-xs mx-auto px-4 flex items-center lg:max-w-none lg:px-8">
+                  <AiFillSave className='h-8 w-8 text-blue-500'/>
+                  <div className="ml-4 flex-auto flex flex-col-reverse">
+                    <h3 className="font-semibold text-gray-300">Save your config files locally and only configure them once!</h3>
+                    <p className="text-sm font-medium text-gray-500">Configuration</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   )
 }
+
+export default Incentive

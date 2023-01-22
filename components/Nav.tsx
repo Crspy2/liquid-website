@@ -70,7 +70,7 @@ const Nav = (props: Props) => {
                 </div>
               </div>
               <Link href="https://discord.gg/ourserver">
-                <FaDiscord className='text-gray-500 w-6 h-6'/>
+                <FaDiscord className='text-gray-600 w-6 h-6'/>
               </Link>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 {/* Profile dropdown */}

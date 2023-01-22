@@ -5,8 +5,8 @@ export default {
     type: 'document',
     fields: [
         {
-            name: "name",
-            title: "Name",
+            name: "title",
+            title: "Title",
             type: "string"
         },
         {
@@ -15,9 +15,12 @@ export default {
             type: "string"
         },
         {
-            name: "icon",
-            title: "Icon",
-            type: "string"
-        },
+            name: "image",
+            title: 'Image',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
+        }
     ]
 }
