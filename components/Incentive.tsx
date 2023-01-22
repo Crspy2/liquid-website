@@ -1,28 +1,25 @@
+import Image from "next/image"
 import { AiFillEye, AiFillSave } from "react-icons/ai"
 import { BiTargetLock } from "react-icons/bi"
+import { urlFor } from "../lib/sanity.client"
 
-const Incentive = () => {
+type Props = {
+  incentiveInfo: Incentive[]
+}
+
+const Incentive = ({ incentiveInfo }: Props) => {
+  const incentive = incentiveInfo[0]
   return (
     <div className="bg-[#0F0E13]">
       <div className="max-w-7xl mx-auto py-24 sm:px-2 sm:py-32 lg:px-4">
         <div className="max-w-2xl mx-auto px-4 lg:max-w-none">
           <div className="grid grid-cols-1 items-center gap-y-10 gap-x-16 lg:grid-cols-2">
             <div>
-              <h2 className="text-5xl font-extrabold tracking-tight text-blue-500 py-10">
-                A business built for customer satisfaction
-              </h2>
-              <p className="mt-4 text-gray-400">
-                At the beginning at least, but then we realized we could make a lot more money if we kinda stopped
-                caring about that. Our new strategy is to write a bunch of things that look really good in the
-                headlines, then clarify in the small print but hope people don't actually read it.
-              </p>
+              <h2 className="text-5xl font-extrabold tracking-tight text-blue-500 py-10 cursor-default">{incentive.title}</h2>
+              <p className="md:mt-4 text-gray-300 cursor-default">{incentive.description}</p>
             </div>
             <div className="bg-[#0F0E13] rounded-lg overflow-hidden">
-              <img
-                src="https://tailwindui.com/img/ecommerce-images/incentives-07-hero.jpg"
-                alt=""
-                className=""
-              />
+              <Image src={`${urlFor(incentive.image)}`} alt="" className="w-auto h-auto" width={500} height={500}/>
             </div>
           </div>
           {/* Blocks */}
@@ -34,8 +31,8 @@ const Incentive = () => {
                 <div className="max-w-xs mx-auto px-4 flex items-center lg:max-w-none lg:px-8">
                 <AiFillEye className='h-8 w-8 text-blue-500'/>
                   <div className="ml-4 flex-auto flex flex-col-reverse">
-                    <h3 className="font-semibold text-gray-300">Our vast visual customization will let you see what you want!</h3>
-                    <p className="text-sm font-medium text-gray-500">Unique Visuals</p>
+                    <h3 className="font-semibold text-gray-300 cursor-default">{incentive.incentiveDescs[0]}</h3>
+                    <p className="text-sm font-medium text-gray-500 cursor-default">{incentive.incentiveTitles[0]}</p>
                   </div>
                 </div>
               </div>
@@ -43,8 +40,8 @@ const Incentive = () => {
                 <div className="max-w-xs mx-auto px-4 flex items-center lg:max-w-none lg:px-8">
                   <BiTargetLock className='h-8 w-8 text-blue-500'/>
                   <div className="ml-4 flex-auto flex flex-col-reverse">
-                    <h3 className="font-semibold text-gray-300">Tune your aim settings to play the way you want to!</h3>
-                    <p className="text-sm font-medium text-gray-500">Fast, Customizable Aimbot</p>
+                    <h3 className="font-semibold text-gray-300 cursor-default">{incentive.incentiveDescs[1]}</h3>
+                    <p className="text-sm font-medium text-gray-500 cursor-default">{incentive.incentiveTitles[1]}</p>
                   </div>
                 </div>
               </div>
@@ -52,8 +49,8 @@ const Incentive = () => {
                 <div className="max-w-xs mx-auto px-4 flex items-center lg:max-w-none lg:px-8">
                   <AiFillSave className='h-8 w-8 text-blue-500'/>
                   <div className="ml-4 flex-auto flex flex-col-reverse">
-                    <h3 className="font-semibold text-gray-300">Save your config files locally and only configure them once!</h3>
-                    <p className="text-sm font-medium text-gray-500">Configuration</p>
+                    <h3 className="font-semibold text-gray-300 cursor-default">{incentive.incentiveDescs[2]}</h3>
+                    <p className="text-sm font-medium text-gray-500 cursor-default">{incentive.incentiveTitles[2]}</p>
                   </div>
                 </div>
               </div>

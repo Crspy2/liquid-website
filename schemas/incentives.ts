@@ -1,4 +1,3 @@
-
 export default {
     name: "incentives",
     title: "Incentives",
@@ -21,6 +20,18 @@ export default {
             options: {
                 hotspot: true,
             },
+        },
+        {
+            name: "incentiveTitles",
+            title: "IncentivesTitles",
+            type: "array",
+            of: [{type: 'string'}]
+        },
+        {
+            name: "incentiveDescs",
+            title: "IncentiveDescs",
+            type: "array",
+            of: [{type: 'string'}]
         }
     ]
 }

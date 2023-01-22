@@ -26,6 +26,14 @@ interface Banner extends Base {
     largeText2: string;
 }
 
+interface Incentive extends Base {
+    title: string;
+    description: string;
+    image: Image;
+    incentiveTitles: string[];
+    incentiveDescs: string[];
+}
+
 interface Slug {
     _type: "slug";
     current: string;

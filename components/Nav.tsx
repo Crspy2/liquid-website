@@ -4,13 +4,7 @@ import { FiMenu } from 'react-icons/fi'
 import { CgClose } from 'react-icons/cg'
 import { FaDiscord } from 'react-icons/fa'
 import Link from 'next/link'
-
-const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-]
+import Image from 'next/image'
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(' ')
@@ -20,139 +14,47 @@ type Props = {}
 
 const Nav = (props: Props) => {
   return (
-    <Disclosure as="nav" className="fixed z-50 w-full bg-transparent backdrop-filter backdrop-blur-lg">
-      {({ open }) => (
-        <>
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div className="relative flex items-center justify-between h-16">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700">
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <CgClose className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <FiMenu className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
-              </div>
-              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <Link href="/" className='cursor-default'>
-                  <div className="flex-shrink-0 flex items-center">
-                    <img
-                      className="block lg:hidden h-10 w-auto"
-                      src="/logo.png"
-                      alt="Liquid"
-                    />
-                    <img
-                      className="hidden lg:block h-10 w-full"
-                      src="/logo.png"
-                      alt="Liquid"
-                    />
-                  </div>
-                </Link>
-                <div className="hidden sm:block sm:ml-6">
-                  <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? 'text-white' : 'text-gray-300 hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <Link href="https://discord.gg/ourserver">
-                <FaDiscord className='text-gray-600 w-6 h-6'/>
-              </Link>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                {/* Profile dropdown */}
-                <Menu as="div" className="ml-3 relative">
-                  <div>
-                    <Menu.Button className="bg-gray-800 flex text-sm rounded-full">
-                      <span className="sr-only">Open user menu</span>
-                      <img
-                        className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
-                    </Menu.Button>
-                  </div>
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
-                  >
-                    <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-[#0f0e13]' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Your Profile
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-[#0f0e13]' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-[#0f0e13]' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Sign out
-                          </a>
-                        )}
-                      </Menu.Item>
-                    </Menu.Items>
-                  </Transition>
-                </Menu>
-              </div>
-            </div>
-          </div>
-
-          <Disclosure.Panel className="sm:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  className={classNames(
-                    item.current ? ' text-white' : 'text-gray-300 hover:text-white',
-                    'block px-3 py-2 rounded-md text-base font-medium'
-                  )}
-                  aria-current={item.current ? 'page' : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
-              ))}
-            </div>
-          </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
+    
+<div className="px-2 sm:px-4 py-2.5 bg-gray-900 fixed w-full z-20 top-0 left-0 bg-transparent backdrop-filter backdrop-blur-lg">
+  <div className="container flex flex-wrap items-center justify-between mx-auto">
+  <a href="/" className="flex items-center">
+      <Image src="/logo.png" alt="Liquid Logo" className="w-14 h-14" width={50} height={50}/>
+      <span className="self-center text-xl font-semibold whitespace-nowrap text-white">Liquid</span>
+  </a>
+  <div className="flex md:order-2">
+      <button type="button" className="text-white font-bold rounded-lg text-sm px-5 py-2.5 text-center md:mr-0 bg-blue-600 hover:bg-blue-700 mr-3">
+        Sign up
+      </button>
+      <button type="button" className="text-white font-bold rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 bg-blue-600 hover:bg-blue-700 md:ml-3">
+        Log in
+      </button>
+  </div>
+  <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="sticky">
+    <ul className="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium">
+      <li>
+      <a href="#incentive" className="block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-white text-gray-300 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">
+          Propaganda
+        </a>
+      </li>
+      <li>
+        <a href="#" className="block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-white text-gray-300 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">
+          Reviews
+        </a>
+      </li>
+      <li>
+        <a href="#products" className="block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-white text-gray-300 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">
+          Products
+        </a>
+      </li>
+      <li>
+      <a href="#" className="block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-white text-gray-300 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</div>
   )
 }
 
