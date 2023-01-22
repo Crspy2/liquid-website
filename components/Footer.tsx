@@ -17,26 +17,15 @@ const Footer = (props: Props) => {
                 <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Liquid</span>
             </div>
         </div>
-        <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+        <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
             <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                 <ul className="text-gray-600 dark:text-gray-400">
                     <li className="mb-4">
                         <Link href="/" className="hover:underline">Tutorial</Link>
                     </li>
                     <li>
-                        <Link href="/" className="hover:underline">Download</Link>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
-                <ul className="text-gray-600 dark:text-gray-400">
-                    <li className="mb-4">
-                        <Link href="https://discord.gg/ourserver" className="hover:underline ">Discord</Link>
-                    </li>
-                    <li>
-                        <Link href="https://youtube.com/@crspytm" className="hover:underline">YouTube</Link>
+                        <Link href="/download" className="hover:underline">Download</Link>
                     </li>
                 </ul>
             </div>
@@ -44,10 +33,10 @@ const Footer = (props: Props) => {
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
                 <ul className="text-gray-600 dark:text-gray-400">
                     <li className="mb-4">
-                        <Link href="#" className="hover:underline">Privacy Policy</Link>
+                        <Link href="/pp" className="hover:underline">Privacy Policy</Link>
                     </li>
                     <li>
-                        <Link href="#" className="hover:underline">Terms &amp; Conditions</Link>
+                        <Link href="https://store.liquid.cx/terms" className="hover:underline">Terms &amp; Conditions</Link>
                     </li>
                 </ul>
             </div>
@@ -61,11 +50,11 @@ const Footer = (props: Props) => {
             <Link href="https://discord.gg/H4SZNkEKex" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
               <FaDiscord />
             </Link>
-            <Link href="https://youtube.com/@liquidcx" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-              <FaYoutube />
-            </Link>
             <Link href="https://twitter.com/liquid_cx" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
               <FaTwitter />
+            </Link>
+            <Link href="https://youtube.com/@liquidcx" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+              <FaYoutube />
             </Link>
             <Link href="https://www.tiktok.com/@liquid_cx" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
               <FaTiktok />

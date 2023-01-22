@@ -32,22 +32,22 @@ const Nav = (props: Props) => {
   <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="sticky">
     <ul className="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium">
       <li>
-      <a href="#incentive" className="block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-white text-gray-300 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">
+      <a href="/#incentive" className="block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-white text-gray-300 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">
           Propaganda
         </a>
       </li>
       <li>
-        <a href="#" className="block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-white text-gray-300 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">
+        <a href="/#" className="block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-white text-gray-300 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">
           Reviews
         </a>
       </li>
       <li>
-        <a href="#products" className="block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-white text-gray-300 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">
+        <a href="/#products" className="block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-white text-gray-300 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">
           Products
         </a>
       </li>
       <li>
-      <a href="#" className="block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-white text-gray-300 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">
+      <a href="/#" className="block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-white text-gray-300 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">
           Contact
         </a>
       </li>

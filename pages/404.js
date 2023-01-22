@@ -29,7 +29,7 @@ const Custom404 = () => {
           </div>
           <div className="max-w-xl mx-auto pb-16 sm:pb-24">
             <div className="text-center">
-              <p className="text-6xl font-bold text-indigo-600 uppercase tracking-wide prevent-select">404 error</p>
+              <p className="text-7xl font-extrabold uppercase tracking-wide prevent-select text-transparent bg-clip-text bg-gradient-to-r from-[#007CF0] to-[#00DFD8] cursor-default">404 error</p>
               <h1 className="mt-2 text-4xl font-extrabold text-gray-300 tracking-tight sm:text-5xl prevent-select">
                 This page does not exist.
               </h1>
