@@ -20,7 +20,7 @@ type Props = {}
 
 const Nav = (props: Props) => {
   return (
-    <Disclosure as="nav" className="fixed w-full bg-transparent backdrop-filter backdrop-blur-lg">
+    <Disclosure as="nav" className="fixed z-50 w-full bg-transparent backdrop-filter backdrop-blur-lg">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
