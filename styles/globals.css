@@ -11,22 +11,6 @@
   user-select: none; /* Standard syntax */
 }
 
-.gradient-bg {
-  position: relative;
-  overflow: hidden;
-  background-color:#0f0e13;
-  background-image: radial-gradient(at 0% 0%, #030303 0, transparent 50%), 
-                    radial-gradient(at 10% 40%, #000F76 0, transparent 50%);
-}
-.gradient-bg:before {
-  transform: rotate(810deg);
-}
-
-.incentive-gradient {
-  background-color:#0f0e13;
-  /* background-image: radial-gradient(800px 600px at 66.8% 40%, #AF18AC 0, transparent 45%); */
-}
-
 .liquid-title-gradient {
   background-color: #209cff;
   background-image: radial-gradient(at 4% 36%, #209cff 0, transparent 53%), 
@@ -54,6 +38,12 @@
 }
 
 @media (max-width:640px) {
+  .gradient-bg {
+    background-color:#0f0e13;
+    background-image: radial-gradient(700px 400px at 50% 83.5%, #0199fe 0, transparent 30%), 
+                      radial-gradient(800px 400px at 10% 30%, #000F76 0, transparent 50%);
+  }
+
   .incentive-gradient {
     background-color:#0f0e13;
     background-image: radial-gradient(500px 300px at 50% 46%, #AF18AC 0, transparent 100%);
@@ -63,8 +53,8 @@
 @media (min-width: 640px) and ( max-width: 767px) {
   .gradient-bg {
     background-color:#0f0e13;
-    background-image: radial-gradient(at 0% 0%, #030303 0, transparent 50%), 
-                      radial-gradient(at 10% 40%, #000F76 0, transparent 50%);
+    background-image: radial-gradient(1000px 600px at 50% 78.5%, #0199fe 0, transparent 30%), 
+                      radial-gradient(800px 400px at 10% 30%, #000F76 0, transparent 50%);
   }
 
   .incentive-gradient {
@@ -76,9 +66,8 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   .gradient-bg {
     background-color:#0f0e13;
-    background-image: radial-gradient(at 0% 0%, #030303 0, transparent 50%), 
-                      radial-gradient(at 74.5% 68.8%, #0199fe 0, transparent 21%), 
-                      radial-gradient(at 10% 40%, #000F76 0, transparent 50%);
+    background-image: radial-gradient(700px 400px at 74.5% 70.9%, #0199fe 0, transparent 30%), 
+                      radial-gradient(800px 400px at 10% 30%, #000F76 0, transparent 50%);
   }
 
   .incentive-gradient {
@@ -91,9 +80,8 @@
 @media (min-width: 1024px) and (max-width: 1279px) {
   .gradient-bg {
     background-color:#0f0e13;
-    background-image: radial-gradient(at 0% 0%, #030303 0, transparent 50%), 
-                      radial-gradient(at 74.9% 68.5%, #0199fe 0, transparent 26%), 
-                      radial-gradient(at 10% 40%, #000F76 0, transparent 50%);
+    background-image: radial-gradient(900px 500px at 74.5% 73.5%, #0199fe 0, transparent 30%), 
+                      radial-gradient(800px 400px at 10% 30%, #000F76 0, transparent 50%);
   }
 
   .incentive-gradient {
@@ -105,9 +93,8 @@
 @media (min-width: 1280px) and (max-width: 1535px) {
   .gradient-bg {
     background-color:#0f0e13;
-    background-image: radial-gradient(at 0% 0%, #030303 0, transparent 50%), 
-                      radial-gradient(at 76.9% 68.5%, #0199fe 0, transparent 28%), 
-                      radial-gradient(at 10% 40%, #000F76 0, transparent 50%);
+    background-image: radial-gradient(1000px 600px at 74.5% 70.5%, #0199fe 0, transparent 30%), 
+                      radial-gradient(900px 500px at 10% 30%, #000F76 0, transparent 50%);
   }
 
   .incentive-gradient {
@@ -119,9 +106,8 @@
 @media (min-width: 1536px) {
   .gradient-bg {
     background-color:#0f0e13;
-    background-image: radial-gradient(at 0% 0%, #030303 0, transparent 50%), 
-                      radial-gradient(at 76.9% 68.5%, #0199fe 0, transparent 30%), 
-                      radial-gradient(at 10% 40%, #000F76 0, transparent 50%);
+    background-image: radial-gradient(1600px 900px at 76.9% 68.5%, #0199fe 0, transparent 30%), 
+                      radial-gradient(1000px 600px at 10% 30%, #000F76 0, transparent 50%);
   }
 
   .incentive-gradient {
