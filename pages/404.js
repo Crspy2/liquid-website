@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { FaDiscord, FaMoneyBill } from 'react-icons/fa'
-import { AiFillHome } from 'react-icons/ai'
+import { AiFillHome, AiOutlineArrowRight } from 'react-icons/ai'
 import { Footer } from '../components'
 
 
@@ -55,7 +55,7 @@ const Custom404 = () => {
                     <p className="text-base text-gray-500">{link.description}</p>
                   </div>
                   <div className="flex-shrink-0 self-center">
-                    <ChevronRightIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                    <AiOutlineArrowRight className="h-5 w-5 text-gray-400" aria-hidden="true" />
                   </div>
                 </li>
               ))}
