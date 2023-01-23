@@ -30,7 +30,10 @@ const Home = ({bannerData, products, incentiveData }: Props) => {
             Our Products
           </h2>
           <div className='products-container'>
-            {products?.map((product) => <ProductCard key={product._id} productInfo={product} />)}
+            {products?.map((product) => product.name.includes("R6 Legit") ? <ProductCard key={product._id} productInfo={product} /> : null)}
+          </div>
+          <div className='products-container'>
+          {products?.map((product) => product.name.includes("R6 Rage") ? <ProductCard key={product._id} productInfo={product} /> : null)}
           </div>
         </section>
 
