@@ -31,18 +31,8 @@ const Nav = (props: Props) => {
         </Link>
       </li>
       <li>
-        <Link href="/#" className="block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-white text-gray-300 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">
-          Reviews
-        </Link>
-      </li>
-      <li>
         <Link href="/#products" className="block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-white text-gray-300 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">
           Products
-        </Link>
-      </li>
-      <li>
-      <Link href="/#" className="block py-2 pl-3 pr-4 rounded md:p-0 md:hover:text-white text-gray-300 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700">
-          Contact
         </Link>
       </li>
     </ul>
