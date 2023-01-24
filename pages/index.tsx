@@ -2,7 +2,7 @@ import React from 'react';
 import { Inter } from '@next/font/google'
 import Link from 'next/link'
 
-import { Incentive, Footer, Header, Nav, ProductCard } from '../components'
+import { Incentive, Header, ProductCard } from '../components'
 import { client } from '../lib/sanity.client'
 import { motion } from 'framer-motion'
 
@@ -22,11 +22,8 @@ const Home = ({bannerData, products, incentiveData }: Props) => {
 
 
   return (
-    <div className="bg-[#0F0E13]">
-      <div className="gradient-bg h-full">
-        <div className='pb-20'>
-          <Nav />
-        </div>
+    <div>
+      <div className="gradient-bg h-full pt-20">
         <Header bannerInfo={bannerData}/>
       </div> 
       
@@ -88,10 +85,6 @@ const Home = ({bannerData, products, incentiveData }: Props) => {
           </div>
         </Link>
       </HideBetween>
-
-      <div id="footer">
-        <Footer/>
-      </div>
     </div>
   )
 }

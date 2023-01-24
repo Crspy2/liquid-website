@@ -15,8 +15,7 @@ const links = [
 const Custom404 = () => {
   return (
     <>
-    <Nav />
-      <div className="bg-[#0f0e13] outline-none">
+      <div className="outline-none">
         <main className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex-shrink-0 pt-16">
             <Image
@@ -66,7 +65,6 @@ const Custom404 = () => {
           </div>
         </main>
       </div>
-      <Footer />
     </>
   )
 }
