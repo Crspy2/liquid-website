@@ -11,7 +11,13 @@ type Props = {
 const Incentive = ({ incentiveInfo }: Props) => {
   const incentive = incentiveInfo[0]
   return (
-    <div className="incentive-gradient">
+    <motion.div 
+      initial={{ opacity: 0, x:200, y: 200, scale: 0.5 }}
+      viewport={{ once: true }}
+      whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      className="incentive-gradient"
+    >
       <div className="max-w-7xl mx-auto py-24 sm:px-2 sm:py-32 lg:px-4">
         <div className="max-w-2xl mx-auto px-4 lg:max-w-none">
           <div className="grid grid-cols-1 items-center gap-y-10 gap-x-16 lg:grid-cols-2">
@@ -104,7 +110,7 @@ const Incentive = ({ incentiveInfo }: Props) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
