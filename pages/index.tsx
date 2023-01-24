@@ -1,7 +1,11 @@
+import React from 'react';
 import { Inter } from '@next/font/google'
 import { Incentive, Footer, Header, Nav, ProductCard } from '../components'
 import { client } from '../lib/sanity.client'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { BsFillArrowUpCircleFill } from 'react-icons/bs'
+import { HideOn } from 'react-hide-on-scroll'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,6 +16,8 @@ type Props = {
 }
 
 const Home = ({bannerData, products, incentiveData }: Props) => {
+
+
   return (
     <div className="bg-[#0F0E13]">
       <main>
@@ -61,6 +67,15 @@ const Home = ({bannerData, products, incentiveData }: Props) => {
       <footer>
         <Footer/>
       </footer>
+      <HideOn divID="about" inverse={true}>
+        <Link href="#">
+          <footer className="sticky bottom-5 w-full cursor-pointer">
+            <div className="flex items-end justify-end pr-10">
+              <BsFillArrowUpCircleFill className="h-10 w-10 rounded-full cursor-pointer text-[#59A9ED]"/>
+            </div>
+          </footer>
+        </Link>
+      </HideOn>
     </div>
   )
 }
