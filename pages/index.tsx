@@ -1,11 +1,15 @@
 import React from 'react';
 import { Inter } from '@next/font/google'
+import Link from 'next/link'
+
 import { Incentive, Footer, Header, Nav, ProductCard } from '../components'
 import { client } from '../lib/sanity.client'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
+
 import { BsFillArrowUpCircleFill } from 'react-icons/bs'
-import  HideOn  from '../hooks/HideOn'
+import HideOn from '../Crspy-Scroll-API/Components/HideOn';
+import HideBetween from '../Crspy-Scroll-API/Components/HideBetween';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +24,6 @@ const Home = ({bannerData, products, incentiveData }: Props) => {
 
   return (
     <div className="bg-[#0F0E13]">
-      <main>
         <div className="gradient-bg h-full">
           <div className='pb-20'>
             <Nav />
@@ -62,20 +65,19 @@ const Home = ({bannerData, products, incentiveData }: Props) => {
           </motion.div>
         </section>
 
-      </main>
-
-      <footer>
-        <Footer/>
-      </footer>
-      <HideOn divID="about" inverse={true}>
-        <Link href="#">
-          <footer className="sticky bottom-5 w-full cursor-pointer">
+      <HideBetween height={true} startHeight={500} endHeight={2100} inverse={true}>
+        <Link href="/">
+          <div className="sticky bottom-5 w-full cursor-pointer">
             <div className="flex items-end justify-end pr-10">
               <BsFillArrowUpCircleFill className="h-10 w-10 rounded-full cursor-pointer text-[#59A9ED]"/>
             </div>
-          </footer>
+          </div>
         </Link>
-      </HideOn>
+      </HideBetween>
+
+      <div id="footer">
+        <Footer/>
+      </div>
     </div>
   )
 }

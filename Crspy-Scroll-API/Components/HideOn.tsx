@@ -1,6 +1,6 @@
 import React from "react";
-import { getOffset } from "./util";
-import { HideOnProps, HideOnState } from "./interface";
+import { getOffset } from "../util";
+import { HideOnProps, HideOnState } from "../Interfaces";
 
 class HideOn extends React.Component<HideOnProps, HideOnState> {
   public static defaultProps = {

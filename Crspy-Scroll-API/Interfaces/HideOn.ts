@@ -7,9 +7,8 @@ export interface HideOnProps {
     atDiv?: Boolean;
     atHeight?: Boolean;
     showOnPageInit: Boolean;
-  }
-  
-  export interface HideOnState {
+}
+
+export interface HideOnState {
     show: Boolean | undefined;
-  }
-  
+}
