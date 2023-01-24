@@ -141,3 +141,15 @@ h3 {
   font-size: 14px;
   font-weight: bold;
 }
+
+.scroll-down {
+  -webkit-animation: scroll-down-bounce 1s ease-in-out infinite;
+  animation: scroll-down-bounce 1s ease-in-out infinite;
+  -webkit-transition: bottom .15s;
+  transition: bottom .15s;
+  bottom: 0;
+  margin-bottom: 45px;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+}
