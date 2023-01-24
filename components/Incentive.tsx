@@ -48,7 +48,13 @@ const Incentive = ({ incentiveInfo }: Props) => {
           <div className="">
             
             {/*  Features */}
-            <div className="bg-gray-900 rounded-lg bg-clip-padding bg-opacity-30 mt-5 max-w-7xl mx-auto divide-y divide-gray-200 lg:py-8 lg:flex lg:justify-center lg:divide-y-0 lg:divide-x">
+            <motion.div 
+              initial={{ opacity: 0, y: 200, scale: 0.5 }}
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="bg-gray-900 rounded-lg bg-clip-padding bg-opacity-30 mt-5 max-w-7xl mx-auto divide-y divide-gray-200 lg:py-8 lg:flex lg:justify-center lg:divide-y-0 lg:divide-x"
+            >
               <motion.div 
                 initial={{ opacity: 0, x:-200, y: 200, scale: 0.5 }}
                 viewport={{ once: true }}
@@ -67,7 +73,7 @@ const Incentive = ({ incentiveInfo }: Props) => {
               <motion.div 
                 initial={{ opacity: 0, y: 200, scale: 0.5 }}
                 viewport={{ once: true }}
-                whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.5 }}
                 className="py-8 lg:py-0 lg:w-1/3 lg:flex-none"
               >
@@ -94,7 +100,7 @@ const Incentive = ({ incentiveInfo }: Props) => {
                   </div>
                 </div>
               </motion.div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
