@@ -21,7 +21,7 @@ const Incentive = ({ incentiveInfo }: Props) => {
                 viewport={{ once: true }}
                 whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className="text-5xl font-extrabold tracking-tight py-10 text-transparent bg-clip-text bg-gradient-to-r from-[#7928CA] to-[#FF0080] cursor-default"
+                className="text-5xl font-extrabold tracking-tight py-10 text-transparent bg-clip-text bg-gradient-to-r from-[#7928CA] to-[#FF0080]"
               >
                 {incentive.title}
               </motion.h2>
@@ -30,7 +30,7 @@ const Incentive = ({ incentiveInfo }: Props) => {
                 viewport={{ once: true }}
                 whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className="md:mt-4 text-gray-300 cursor-default">
+                className="md:mt-4 text-gray-300">
                 {incentive.description}
               </motion.p>
             </div>
@@ -59,8 +59,8 @@ const Incentive = ({ incentiveInfo }: Props) => {
                 <div className="max-w-xs mx-auto px-4 flex items-center lg:max-w-none lg:px-8">
                 <AiFillEye className="h-8 w-8 text-[#AF18AC]"/>
                   <div className="ml-4 flex-auto flex flex-col-reverse">
-                    <h3 className="font-semibold text-gray-300 cursor-default">{incentive.incentiveDescs[0]}</h3>
-                    <p className="text-sm font-medium text-gray-500 cursor-default">{incentive.incentiveTitles[0]}</p>
+                    <h3 className="font-semibold text-gray-300">{incentive.incentiveDescs[0]}</h3>
+                    <p className="text-sm font-medium text-gray-500">{incentive.incentiveTitles[0]}</p>
                   </div>
                 </div>
               </motion.div>
@@ -74,8 +74,8 @@ const Incentive = ({ incentiveInfo }: Props) => {
                 <div className="max-w-xs mx-auto px-4 flex items-center lg:max-w-none lg:px-8">
                   <BiTargetLock className='h-8 w-8 text-[#AF18AC]'/>
                   <div className="ml-4 flex-auto flex flex-col-reverse">
-                    <h3 className="font-semibold text-gray-300 cursor-default">{incentive.incentiveDescs[1]}</h3>
-                    <p className="text-sm font-medium text-gray-500 cursor-default">{incentive.incentiveTitles[1]}</p>
+                    <h3 className="font-semibold text-gray-300">{incentive.incentiveDescs[1]}</h3>
+                    <p className="text-sm font-medium text-gray-500">{incentive.incentiveTitles[1]}</p>
                   </div>
                 </div>
               </motion.div>
@@ -89,8 +89,8 @@ const Incentive = ({ incentiveInfo }: Props) => {
                 <div className="max-w-xs mx-auto px-4 flex items-center lg:max-w-none lg:px-8">
                   <AiFillSave className='h-8 w-8 text-[#AF18AC]'/>
                   <div className="ml-4 flex-auto flex flex-col-reverse">
-                    <h3 className="font-semibold text-gray-300 cursor-default">{incentive.incentiveDescs[2]}</h3>
-                    <p className="text-sm font-medium text-gray-500 cursor-default">{incentive.incentiveTitles[2]}</p>
+                    <h3 className="font-semibold text-gray-300">{incentive.incentiveDescs[2]}</h3>
+                    <p className="text-sm font-medium text-gray-500">{incentive.incentiveTitles[2]}</p>
                   </div>
                 </div>
               </motion.div>

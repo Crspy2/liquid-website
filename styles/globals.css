@@ -5,6 +5,7 @@
 * {
   outline: none !important;
   scroll-behavior: smooth !important;
+  cursor: default;
 }
 .prevent-select {
   -webkit-user-select: none; /* Safari */
