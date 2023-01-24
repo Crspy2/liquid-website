@@ -5,7 +5,7 @@ import { client } from '../lib/sanity.client'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { BsFillArrowUpCircleFill } from 'react-icons/bs'
-import { HideOn } from 'react-hide-on-scroll'
+import  HideOn  from '../hooks/HideOn'
 
 const inter = Inter({ subsets: ['latin'] })
 
