@@ -8,7 +8,7 @@ type Props = {
 
 const ProductCard = ({ productInfo }: Props) => {
   return (
-    <div className="">
+    <div>
       <div className="container ">
         <div className="max-w-md w-full bg-gray-900 shadow-lg rounded-xl p-6 ">
           <div className="flex flex-col">
