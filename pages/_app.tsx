@@ -13,8 +13,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <>
       <Layout>
         <Component {...pageProps} />
-        <Analytics />
       </Layout>
+      <Analytics />
     </>
   )
 }
