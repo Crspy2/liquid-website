@@ -9,10 +9,11 @@ type Props = {}
 
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  const AnyComponent = Component as any;
   return (
     <>
       <Layout>
-        <Component {...pageProps} />
+        <AnyComponent {...pageProps} />
       </Layout>
       <Analytics />
     </>
