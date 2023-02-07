@@ -23,23 +23,23 @@ export default {
         }
       },
       { 
-        name: 'price',
-        title: 'Price',
+        name: 'priceDay',
+        title: 'Day Price',
         type: 'number',
       },
       { 
-        name: 'details',
-        title: 'Details',
-        type: 'string',
+        name: 'priceMonth',
+        title: 'Month Price',
+        type: 'number',
       },
       {
-        name: 'detected',
-        title: 'Detected',
-        type: 'boolean'
+        name: 'dataSellStore',
+        title: 'SellApp Store ID',
+        type: 'string'
       },
       {
-        name: 'sellixpid',
-        title: 'Sellix Product ID',
+        name: 'dataSellProduct',
+        title: 'SellApp Product ID',
         type: 'string'
       }
     ]

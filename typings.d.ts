@@ -10,10 +10,10 @@ interface Product extends Base {
     image: Image;
     name: string;
     slug: Slug;
-    price: number;
-    details: string;
-    detected: boolean;
-    sellixpid: string;
+    priceDay: number;
+    priceMonth: number;
+    dataSellStore: string;
+    dataSellProduct: string;
 }
 
 interface Banner extends Base {

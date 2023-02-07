@@ -36,7 +36,7 @@ const Footer = (props: Props) => {
                         <Link href="/pp" className="hover:underline">Privacy Policy</Link>
                     </li>
                     <li>
-                        <Link href="https://store.liquid.cx/terms" target="_blank" className="hover:underline">Terms &amp; Conditions</Link>
+                        <Link href="https://store.liquid.cx/?browse=terms" target="_blank" className="hover:underline">Terms &amp; Conditions</Link>
                     </li>
                 </ul>
             </div>

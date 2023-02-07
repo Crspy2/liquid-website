@@ -1,8 +1,7 @@
-import React from 'react'
 import Image from 'next/image'
 import { FaDiscord, FaMoneyBill } from 'react-icons/fa'
 import { AiFillHome, AiOutlineArrowRight } from 'react-icons/ai'
-import { Footer, Nav } from '../components'
+import { Layout } from '../components'
 
 
 const links = [ 
@@ -14,7 +13,7 @@ const links = [
 
 const Custom404 = () => {
   return (
-    <>
+    <Layout>
       <div className="outline-none">
         <main className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex-shrink-0 pt-16">
@@ -65,7 +64,7 @@ const Custom404 = () => {
           </div>
         </main>
       </div>
-    </>
+    </Layout>
   )
 }
 

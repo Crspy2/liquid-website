@@ -1,4 +1,4 @@
-import React from 'react';
+import { Layout } from '../components'
 import { Inter } from '@next/font/google'
 import Link from 'next/link'
 
@@ -22,7 +22,7 @@ const Home = ({bannerData, products, incentiveData }: Props) => {
 
 
   return (
-    <div>
+    <Layout>
       <div className="gradient-bg h-full pt-20">
         <Header bannerInfo={bannerData}/>
       </div> 
@@ -48,17 +48,9 @@ const Home = ({bannerData, products, incentiveData }: Props) => {
           transition={{ duration: 0.5 }}
           className='products-container'
         >
-          {products?.map((product) => product.name.includes("R6 Legit") ? <ProductCard key={product._id} productInfo={product} /> : null)}
+          {products?.map((product) => <ProductCard key={product._id} productInfo={product} /> )}
         </motion.div>
-        <motion.div 
-          initial={{ opacity: 0, y: 200, scale: 0.5 }}
-          viewport={{ once: true }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className='products-container'
-        >
-        {products?.map((product) => product.name.includes("R6 Rage") ? <ProductCard key={product._id} productInfo={product} /> : null)}
-        </motion.div>
+        
       </section>
 
       <HideOn height={20}>
@@ -85,7 +77,7 @@ const Home = ({bannerData, products, incentiveData }: Props) => {
           </div>
         </Link>
       </HideBetween>
-    </div>
+    </Layout>
   )
 }
 

@@ -7,7 +7,7 @@ type Props = {}
 
 const Nav = (props: Props) => {
   return (
-  <header className="px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 bg-transparent backdrop-filter backdrop-blur-lg">
+  <header className="px-2 sm:px-4 py-2.5 fixed w-full z-20 left-0 bg-transparent backdrop-filter backdrop-blur-lg">
     <div className="container flex flex-wrap items-center justify-between mx-auto">
     <Link href="/" className="flex items-center">
         <Image src="/logo.png" alt="Liquid Logo" className="w-14 h-14" width={50} height={50}/>
