@@ -1,11 +1,9 @@
-import React, { Fragment } from 'react'
 import { FaDiscord } from 'react-icons/fa'
 import Link from 'next/link'
 import Image from 'next/image'
 
-type Props = {}
 
-const Nav = (props: Props) => {
+const Nav = () => {
   return (
   <header className="px-2 sm:px-4 py-2.5 fixed w-full z-20 left-0 bg-transparent backdrop-filter backdrop-blur-lg">
     <div className="container flex flex-wrap items-center justify-between mx-auto">

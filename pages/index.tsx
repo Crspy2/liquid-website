@@ -8,6 +8,7 @@ import { motion } from 'framer-motion'
 
 import { BsFillArrowUpCircleFill } from 'react-icons/bs'
 import { HideOn, HideBetween } from '../Crspy-API/Components';
+import { groq } from 'next-sanity'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -82,13 +83,13 @@ const Home = ({bannerData, products, incentiveData }: Props) => {
 }
 
 export const getServerSideProps = async () => {
-  const productsQuery = '*[_type == "product"]';
+  const productsQuery = groq`*[_type == "product"]`;
   const products = await client.fetch(productsQuery);
 
-  const bannerQuery = '*[_type == "banner"]';
+  const bannerQuery = groq`*[_type == "banner"]`;
   const bannerData = await client.fetch(bannerQuery);
 
-  const incentiveQuery = '*[_type == "incentive"]';
+  const incentiveQuery = groq`*[_type == "incentive"]`;
   const incentiveData = await client.fetch(incentiveQuery);
 
 

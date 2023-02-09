@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Script from 'next/script'
-import React from 'react'
 import { urlFor } from '../lib/sanity.client'
 
 type Props = {
@@ -11,12 +10,6 @@ type Props = {
 const ProductCard = ({ productInfo }: Props) => {
   return (
     <div>
-      <Head>
-        <link
-          href="https://cdn.sell.app/embed/style.css"
-          rel="stylesheet"
-        />
-      </Head>
       <div className="container ">
         <div className="max-w-md w-full bg-gray-900 shadow-lg rounded-xl p-6 ">
           <div className="flex flex-col">
