@@ -1,4 +1,4 @@
-import { Layout } from '../components'
+import { Footer, Layout } from '../components'
 
 
 type Props = {}
@@ -47,6 +47,7 @@ const privacyPolicy = (props: Props) => {
           <h2>Privacy Policy Changes</h2>
           Although most changes are likely to be minor, liquid.cx may change its Privacy Policy from time to time, and in liquid.cx's sole discretion. liquid.cx encourages visitors to frequently check this page for any changes to its Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.
         </main>
+        <Footer/>
     </Layout>
   )
 }
