@@ -6,9 +6,9 @@ import { Incentive, Header, ProductCard } from '../components'
 import { client } from '../lib/sanity.client'
 import { motion } from 'framer-motion'
 
-// import { BsFillArrowUpCircleFill } from 'react-icons/bs'
-// import { HideOn, HideBetween } from '../Crspy-API/Components';
+import { BsFillArrowUpCircleFill } from 'react-icons/bs'
 import { groq } from 'next-sanity'
+import { HideBetween, HideOn } from '../Crspy-API/Components'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -23,17 +23,17 @@ const Home = ({bannerData, products, incentiveData }: Props) => {
 
 
   return (
-    <div className="h-screen snap-y snap-mandatory overflow-scroll z-0">
+    <div className="h-screen">
       <Layout>
-          <div className="gradient-bg h-full pt-20 snap-center">
+          <div className="gradient-bg h-full pt-20">
             <Header bannerInfo={bannerData}/>
           </div> 
           
-          <section id="about" className='-mt-20 pt-20 snap-center'>
+          <section id="about" className='-mt-20 pt-20'>
             <Incentive incentiveInfo={incentiveData} />
           </section>
           
-          <section id='products' className="products-container py-20 snap-center">
+          <section id='products' className="products-container py-20">
             <motion.h2 
               initial={{ opacity: 0, y: 200, scale: 0.5 }}
               viewport={{ once: true }}
@@ -55,7 +55,7 @@ const Home = ({bannerData, products, incentiveData }: Props) => {
             
           </section>
 
-        {/* <HideOn height={20}>
+        <HideOn height={20}>
             <div className="sticky bottom-10 pl-20 w-full">
               <div className="flex items-start justify-start animate-bounce">
               <svg  version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="17" height="26" viewBox="0, 0, 17, 26" 
@@ -78,8 +78,8 @@ const Home = ({bannerData, products, incentiveData }: Props) => {
               </div>
             </div>
           </Link>
-        </HideBetween> */}
-        <section className="snap-start">
+        </HideBetween>
+        <section>
           <Footer />
         </section>
       </Layout>
